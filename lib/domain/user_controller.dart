@@ -4,16 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final userProvider = StateProvider((ref) => <User>[]);
-final userControllerProvider = Provider(
+final userControllerProvider = StateNotifierProvider<UserController,bool>(
   (ref) => UserController(
     userRepository: ref.read(userRepositoryProvider),
   ),
 );
 
-class UserController {
+class UserController extends StateNotifier<bool>{
   final UserRepository _userRepository;
   UserController({required UserRepository userRepository})
-      : _userRepository = userRepository;
+      : _userRepository = userRepository,
+        super(false);
 
   Future<void> getUsers(context) async {
     try {
