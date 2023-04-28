@@ -1,6 +1,6 @@
 # clean_riverpod
 
-A new Flutter project.
+Fetching API's in Flutter using riverpod : The clean way.
 
 ## Getting Started
 
