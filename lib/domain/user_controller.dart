@@ -1,5 +1,5 @@
-import 'package:clean_riverpod/user_model.dart';
-import 'package:clean_riverpod/user_repository.dart';
+import 'package:clean_riverpod/data/user_model.dart';
+import 'package:clean_riverpod/data/user_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
